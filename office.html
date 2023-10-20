@@ -4,13 +4,178 @@
         function getCookie() {
             document.getElementById("cookie").innerText = document.cookie;
         }
+        function getProduct() {
+            
+            var img = document.createElement("img");
+            img.src = "http://localhost:8001/banner?location=product";
+            document.getElementById("products").appendChild(img);
+        }
     </script>
+    <style>
+        /* @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap"); */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  height: 100vh;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #1488cc;
+  background: -webkit-linear-gradient(to right, #2b32b2, #1488cc);
+  background: linear-gradient(to right, #2b32b2, #1488cc);
+}
+
+.blog_post_ad {
+  background: #fff;
+  max-width: 20%;
+  height: 40%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  /* position: relative; */
+  /* display: inline-block; */
+  margin-left: 2%;
+}
+
+
+.blog_post {
+  background: #fff;
+  max-width: 70%;
+  height: 70%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  /* position: relative; */
+  /* display: inline-block; */
+}
+
+
+.container_copy {
+  padding: 6rem 4rem 5rem 4rem;
+}
+
+.img_pod {
+  height: 110px;
+  width: 110px;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  z-index: 10;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  position: absolute;
+  left: -10%;
+  top: -13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+    width: 100%;
+    /* height: 150%; */
+    margin-top: 2%;
+  /* border-radius: 100%; */
+  /* box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3); */
+  /* z-index: 1; */
+}
+
+h3 {
+  margin: 0 0 0.5rem 0;
+  color: #999;
+  font-size: 1.25rem;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+  color: #333;
+}
+
+p {
+  margin: 0 0 4.5rem 0;
+  font-size: 1.5rem;
+  line-height: 1.45;
+  color: #333;
+}
+
+.btn_primary {
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  padding: 1.5rem 2rem;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+
+.btn_primary:hover {
+  box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
+}
+
+@media only screen and (max-width: 650px) {
+  body {
+    background-color: black;
+  }
+}
+
+    </style>
 </head>
 <body onload="getCookie()">
-    <div>Cookie: &nbsp; &nbsp; &nbsp;<span id = "cookie"> </span></div>
-    <img style="  display: block;
+    <!-- <div>Cookie: &nbsp; &nbsp; &nbsp;<span id = "cookie"> </span></div> -->
+    <!-- <img style="  display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;" src="https://44.218.248.48.nip.io/banner?location=office">
+    width: 50%;" src="https://44.218.248.48.nip.io/banner?location=office"> -->
+
+    
+    <div class="blog_post">
+        <!-- <div class="img_pod">
+           <img src="http://localhost:8001/banner?location=office" alt="random image"> 
+        </div> -->
+        <div class="container_copy">
+          <h3>Online ECOM Blog</h3>
+          <h1>Shoppable Content: How to Get Started And Make Money in 2023</h1>
+          <p>In the last decade, shopping has changed for the better. Social commerce, with features like shoppable content, is about a thousand times more enjoyable than stuffy department stores — which is why we expect the popularity of shoppable content to continue growing.
+
+            Ecommerce as a whole is projected to make up close to a quarter of total global retail sales by 2026. So, if you’re not creating shoppable content on social media platforms, we’re here to tell you that you should be.
+            
+            In this article, we’ll walk you through what shoppable content is, why retailers and shoppers love it, and why you will too. Then, we’ll show you some IRL examples and highlight our recommended shoppable content tools.</p>
+          <!-- <a class="btn_primary" href='#' target="_blank">Click for cookie</a> -->
+        </div>
+        
+        <!-- <button onClick="getProduct()">
+            <div id="s-circle">Click for cookie</div>
+            <span></span>
+          </button> -->
+        
+      </div>
+
+      <!-- <div class="blog_post_ad">
+        <div class="container_copy"> -->
+            <!-- <h3>Shopping Blog</h3>
+            <h1>Blog on buying Products</h1> -->
+            <!-- <img src="http://localhost:8001/banner" alt="from cookie results image"> -->
+
+            <!-- <p>Advertise</p> -->
+            <!-- <a class="btn_primary" href='#' target="_blank">Click for cookie</a> -->
+          <!-- </div>
+      </div> -->
+
+      <!-- <div id="products">
+        <img src="http://localhost:8001/banner" alt="random image">
+      </div> -->
+
+      <img src="http://localhost:8001/banner?location=default" alt="from cookie results image">
 </body>
 </html>

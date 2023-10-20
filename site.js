@@ -8,7 +8,7 @@ app.use(cookieParser());
 
 //serves homeSite.html and sets first-party cookie
 app.get('/',function(req,res){
-    res.cookie("first-party","777");
+    res.cookie("blog-site-cookie", new Date().toISOString());
     res.sendFile(path.join(__dirname+"/office.html"));
 });
 
